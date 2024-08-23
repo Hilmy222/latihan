@@ -12,3 +12,4 @@ Route::get('/', function () {
 Route::get('/login',[LoginController::class,'login']);
 Route::post('/login/proses',[LoginController::class,'proses'])-> name('dashboard');
 Route::get('/dashboard',[DashboardController::class,'dashboard']);
+Route::get('/home',[DashboardController::class,'home']);
