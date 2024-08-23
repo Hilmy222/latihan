@@ -16,11 +16,11 @@
             </li>
             <li class="flex gap-6">
                 <div class="flex border border-[#808080] outline-none bg-transparent rounded-lg">
-                <input type="text" placeholder="Cari menu disini" class=""><img src="/assets/icon" alt="">
+                <input type="text" placeholder="Cari menu disini" class="py-2 px-4 outline-none"><img src="/assets/icon" alt="">
                 <img src="/assets/icon/search.svg" alt="" class="w-10 h-10">  
                 </div>
                 <img src="/assets/icon/bag.svg" alt="">
-                <button class="bg-[#202020] text-white px-6 rounded-xl font-semibold">Login</button>
+                <button class="bg-[#202020] text-white px-6 rounded-xl font-semibold"><a href="login">Login</button></a>
             </li>
         </ul>
     </nav>
