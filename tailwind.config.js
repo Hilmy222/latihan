@@ -9,6 +9,9 @@ export default {
     extend: {
       fontFamily:{
         sans : ['Poppins']
+      },
+      colors:{
+        cmr : '#768d3a'
       }
     },
   },
