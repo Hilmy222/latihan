@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
-    <title>Document</title>
+    <title>Cemara</title>
+    <link rel="shortcut icon" href="/assets/icon/Cemara.png">
 </head>
 
 <body class="font-sans mx-auto max-w-[1920px]">
@@ -18,7 +19,7 @@
             </li>
             <li class="flex gap-16">
                 <a href="" class="hover:text-cmr font-medium">Home</a>
-                <a href="" class="hover:text-cmr font-medium">Menu</a>
+                <a href="#our-menu" class="hover:text-cmr font-medium ">Menu</a>
                 <a href="" class="hover:text-cmr font-medium">Contact Us</a>
             </li>
             <li class="flex gap-6 items-center">
@@ -35,6 +36,26 @@
         </ul>
     </nav>
     @yield('content')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('a[href^="#"]');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

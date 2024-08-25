@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('produk', function (Blueprint $table) {
             $table->id('id_produk'); // Primary key dengan nama id_produk
             $table->string('nama'); // Nama produk
+            $table->string('deskripsi'); // Nama produk
             $table->string('gambar'); // Gambar produk, gunakan string untuk tipe VARCHAR
             $table->enum('jenis', ['makanan', 'minuman']); // Jenis produk
             $table->integer('harga'); // Harga produk, gunakan integer
-            $table->time('waktu_penyajian'); // Waktu penyajian produk
+            $table->integer('waktu_penyajian'); // Waktu penyajian produk
             $table->string('bintang'); // Bintang, gunakan string untuk tipe VARCHAR
             $table->timestamps(); // Kolom created_at dan updated_at
         });

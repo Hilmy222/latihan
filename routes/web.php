@@ -14,6 +14,7 @@ Route::get('/', function () {
 // Route Login
 Route::get('/login',[LoginController::class,'login']);
 Route::post('/login/proses',[LoginController::class,'proses'])-> name('dashboard');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/home',[HomeController::class,'home']);
 
 // Route Admin 

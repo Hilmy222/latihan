@@ -23,10 +23,11 @@ class ProdukController extends Controller
         // Validasi input
         $request->validate([
             'nama' => 'required|string|max:255',
+            'deskripsi' => 'required|string|max:255',
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'jenis' => 'required|in:makanan,minuman',
             'harga' => 'required|integer',
-            'waktu_penyajian' => 'required|date_format:H:i',
+            'waktu_penyajian' => 'required|integer',
             'bintang' => 'required|string|max:10',
         ]);
 
@@ -41,6 +42,7 @@ class ProdukController extends Controller
         // Simpan data ke database
         Produk::create([
             'nama' => $request->input('nama'),
+            'deskripsi' => $request->input('deskripsi'),
             'gambar' => $filename,
             'jenis' => $request->input('jenis'),
             'harga' => $request->input('harga'),

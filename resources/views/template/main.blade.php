@@ -75,7 +75,6 @@
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
-                    <span class="mr-0 d-none d-lg-inline text-gray-600 normal" style="margin-top: 26px">{{ Auth::user()->username }}</span>
                         <div class="topbar-divider d-none d-sm-block"></div>
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">

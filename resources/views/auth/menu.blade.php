@@ -26,6 +26,7 @@
                         <tr>
                             <th>ID</th>
                             <th>Nama</th>
+                            <th>Deskripsi</th>
                             <th>Gambar</th>
                             <th>Jenis</th>
                             <th>Harga</th>
@@ -39,6 +40,7 @@
                             <tr>
                                 <td>{{ $item->id_produk}}</td>
                                 <td>{{ $item->nama }}</td>
+                                <td>{{ $item->deskripsi }}</td>
                                 <td><img src="{{ asset('storage/' . $item->gambar) }}" alt="Gambar Produk" width="100"></td>
                                 <td>{{ $item->jenis }}</td>
                                 <td>Rp.{{ $item->harga }}</td>
@@ -85,6 +87,10 @@
                         <input type="text" class="form-control" id="nama" name="nama" required>
                     </div>
                     <div class="form-group">
+                        <label for="deskripsi">Deskripsi</label>
+                        <input type="text" class="form-control" id="deskripsi" name="deskripsi" required>
+                    </div>
+                    <div class="form-group">
                         <label for="gambar">Gambar Produk</label>
                         <input type="file" class="form-control-file" id="gambar" name="gambar" required>
                     </div>
@@ -101,7 +107,7 @@
                     </div>
                     <div class="form-group">
                         <label for="waktu_penyajian">Waktu Penyajian</label>
-                        <input type="time" class="form-control" id="waktu_penyajian" name="waktu_penyajian" required>
+                        <input type="text" class="form-control" id="waktu_penyajian" name="waktu_penyajian" required>
                     </div>
                     <div class="form-group">
                         <label for="bintang">Bintang</label>
