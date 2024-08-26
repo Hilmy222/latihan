@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
+use Illuminate\Support\Facades\Storage;
+
 
 use App\Http\Controllers\Controller;
 use App\Models\Produk;
@@ -23,7 +25,7 @@ class ProdukController extends Controller
         // Validasi input
         $request->validate([
             'nama' => 'required|string|max:255',
-            'deskripsi' => 'required|string|max:255',
+            'deskripsi' => 'required|string|max:1000',
             'gambar' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'jenis' => 'required|in:makanan,minuman',
             'harga' => 'required|integer',
@@ -57,6 +59,48 @@ class ProdukController extends Controller
         $produk = Produk::findOrFail($id_produk);
         $produk->delete();
         return redirect()->back()->with('success', 'Produk berhasil dihapus');
+    }
+    public function update(Request $request, $id_produk)
+    {
+        $request->validate([
+            'nama' => 'required',
+            'deskripsi' => 'required',
+            'gambar' => 'image|mimes:jpeg,png,jpg,gif|max:2048',
+            'jenis' => 'required',
+            'harga' => 'required|numeric',
+            'waktu_penyajian' => 'required',
+            'bintang' => 'required|numeric',
+        ]);
+
+        $produk = Produk::findOrFail($id_produk);
+
+    // Proses upload gambar baru
+    $filename = $produk->gambar; // Pertahankan gambar lama
+    if ($request->hasFile('gambar')) {
+        // Hapus gambar lama jika ada
+        if ($produk->gambar && file_exists(public_path('storage/' . $produk->gambar))) {
+            unlink(public_path('storage/' . $produk->gambar));
+        }
+
+        // Upload gambar baru
+        $file = $request->file('gambar');
+        $filename = time() . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path('storage'), $filename);
+    }
+
+
+        // Update data produk
+        $produk->update([
+            'nama' => $request->nama,
+            'deskripsi' => $request->deskripsi,
+            'gambar' => $filename,
+            'jenis' => $request->jenis,
+            'harga' => $request->harga,
+            'waktu_penyajian' => $request->waktu_penyajian,
+            'bintang' => $request->bintang,
+        ]);
+
+        return redirect()->back()->with('success', 'Produk berhasil ditambahkan');
     }
     
 }

@@ -16,11 +16,17 @@ class HomeController extends Controller
         ]);
     }
 
-    public function detail()
+    public function detail($id_produk)
     {
-        return view('detail');
+        // Temukan produk berdasarkan ID
+        $produk = Produk::findOrFail($id_produk);
+
+        // Kirim data produk ke view
+        return view('detail', compact('produk'));
     }
-    
+
+
+
     public function payment()
     {
         return view('payment');

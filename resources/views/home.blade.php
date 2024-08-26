@@ -29,11 +29,11 @@
     <div class="grid grid-cols-3 gap-16">
         @foreach ($produk as $item)
             <div class="bg-[#F8F8F8] w-[240px] rounded-xl px-4 py-4">
-                <a href="/detailproduk">
+                <a href="{{ route('produk.detail', $item->id_produk) }}">
                 <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->nama }}" class="h-[195px] w-full object-cover rounded-xl overflow-hidden">
                 <h1 class="text-xl tracking-wide font-medium py-4 break-words">{{ $item->nama }}</h1>
                 <div class="flex items-center mb-4 justify-between">
-                    <p class="tracking-wide font-medium text-[#808080] text-xs">{{ $item->deskripsi }}</p>
+                    <p class="tracking-wide font-medium text-[#808080] text-xs">{{ $item->jenis }}</p>
                     <div class="flex space-x-1" id="he">
                         <img src="/assets/icon/star.svg" alt="" class="w-5 h-5">
                         <p>{{ $item->bintang }}</p>

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('produk', function (Blueprint $table) {
             $table->id('id_produk'); // Primary key dengan nama id_produk
             $table->string('nama'); // Nama produk
-            $table->string('deskripsi'); // Nama produk
+            $table->mediumText('deskripsi'); // Nama produk
             $table->string('gambar'); // Gambar produk, gunakan string untuk tipe VARCHAR
             $table->enum('jenis', ['makanan', 'minuman']); // Jenis produk
             $table->integer('harga'); // Harga produk, gunakan integer
