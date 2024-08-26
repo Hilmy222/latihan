@@ -25,40 +25,16 @@
     <div id="our-menu" class= "mt-20 ">
         <h1 class="text-center">Our Menu</h1>
     </div>
-    <div class="container px-9">
-        <div class="bg-[#F8F8F8] w-[240px] rounded-xl container px-4 py-4">
-            <img src="/assets/img/martabak.png" alt=""
-                class="h-[195px] w-full object-cover rounded-xl overflow-hidden">
-            <h1 class="text-xl tracking-wide w-3/4 font-medium py-4 break-words">Martabak</h1>
-            <div class="flex items-center mb-4">
-                <p class="tracking-wide font-medium w-3/4 text-[#808080] text-xs">Lorem ipsum dolor</p>
-                <div class="flex gap-2" id="he">
-                    <img src="/assets/icon/star.svg" alt="" class="w-5 h-5">
-                    <p>4.8</p>
-                </div>
-            </div>
-            <div class="flex justify-between">
-                <div class="flex gap-1 items-center">
-                    <img src="/assets/icon/price.svg" alt="" class="h-4 w-4">
-                    <h1 class="text-xs font-medium">Rp. 8000</h1>
-                </div>
-                <div class="flex gap-1 items-center">
-                    <img src="/assets/icon/hand.svg" alt="" class="h-4 w-4">
-                    <h1 class="text-xs font-medium">20 Mins</h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    {{-- End Our Menu --}}
-    <div class="container grid grid-cols-3 gap-6 px-9 mt-10">
-        {{-- Looping untuk menampilkan setiap produk --}}
+    <div class="flex justify-center">
+    <div class="grid grid-cols-3 gap-16">
         @foreach ($produk as $item)
             <div class="bg-[#F8F8F8] w-[240px] rounded-xl px-4 py-4">
+                <a href="/detailproduk">
                 <img src="{{ asset('storage/' . $item->gambar) }}" alt="{{ $item->nama }}" class="h-[195px] w-full object-cover rounded-xl overflow-hidden">
                 <h1 class="text-xl tracking-wide font-medium py-4 break-words">{{ $item->nama }}</h1>
-                <div class="flex items-center mb-4">
+                <div class="flex items-center mb-4 justify-between">
                     <p class="tracking-wide font-medium text-[#808080] text-xs">{{ $item->deskripsi }}</p>
-                    <div class="flex gap-2" id="he">
+                    <div class="flex space-x-1" id="he">
                         <img src="/assets/icon/star.svg" alt="" class="w-5 h-5">
                         <p>{{ $item->bintang }}</p>
                     </div>
@@ -73,10 +49,13 @@
                         <h1 class="text-xs font-medium">{{ $item->waktu_penyajian }} Mins</h1>
                     </div>
                 </div>
+            </a>
             </div>
         @endforeach
     </div>
+    </div>
     {{-- End Our Menu --}}
+
 
     <div>
         <div class="bg-cmr flex py-8 my-20">

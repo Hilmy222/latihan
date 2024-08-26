@@ -11,13 +11,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route Login
+
 Route::get('/login',[LoginController::class,'login']);
 Route::post('/login/proses',[LoginController::class,'proses'])-> name('dashboard');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/home',[HomeController::class,'home']);
+Route::get('/payment',[HomeController::class,'payment']);
+Route::get('/detailproduk',[HomeController::class,'detail'])->name('detail');
 
-// Route Admin 
+
+
 Route::get('/dashboard',[DashboardController::class,'index']);
 Route::get('/menu',[ProdukController::class,'formProduk']);
 Route::post('/menu', [ProdukController::class, 'store'])->name('produk.store');

@@ -35,7 +35,6 @@
     <link href="/template/css/sb-admin-2.min.css" rel="stylesheet">
     <link href="/template/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
     @vite('resources/css/app.css')
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
 

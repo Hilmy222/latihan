@@ -18,7 +18,7 @@
                 <h1 class="font-bold text-lg">Cemara</h1>
             </li>
             <li class="flex gap-16">
-                <a href="" class="hover:text-cmr font-medium">Home</a>
+                <a href="/home" class="hover:text-cmr font-medium">Home</a>
                 <a href="#our-menu" class="hover:text-cmr font-medium ">Menu</a>
                 <a href="" class="hover:text-cmr font-medium">Contact Us</a>
             </li>
