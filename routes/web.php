@@ -17,6 +17,7 @@ Route::post('/login/proses',[LoginController::class,'proses'])-> name('dashboard
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/home',[HomeController::class,'home']);
 Route::get('/payment',[HomeController::class,'payment']);
+Route::get('/keranjang',[HomeController::class,'keranjang']);
 Route::get('/detail/{id_produk}', [HomeController::class, 'detail'])->name('produk.detail');
 
 

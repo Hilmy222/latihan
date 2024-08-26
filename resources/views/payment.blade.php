@@ -7,12 +7,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     @vite('resources/css/app.css')
     <title>Payment</title>
-    <link rel="shortcut icon" href="/assets/icon/Cemara.png">
 </head>
 
 <body class="font-sans mx-auto max-w-[1920px]">
-    <div>
-        <h1>Silahkan Lakukan Pembayaran</h1>
+    <div class="container px-20 ">
+      <div class="border border-b border-[#808080] pb-2 my-16">
+        <h1 class="font-medium">Silahkan Lakukan Pembayaran</h1>
+      </div> 
+        <div class="flex gap-2">
+          <img src="" alt="">
+          <h1 class="font-medium">Delivery address</h1>
+        </div>
+        <div class="bg-[#768d3a] w-[369px] h-[150px]">
+          <img src="" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, odit</p>
+        </div>
     </div>
 </body>
 
