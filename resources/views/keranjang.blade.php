@@ -15,11 +15,13 @@
                     <table class="flex flex-col gap-8">
                         <thead class="border-b">
                             <tr class="bg-white">
-                                <th class="text-sm font-medium text-gray-900 pl-12 pr-[500px] py-4 text-left">Produk</th>
-                                <th class="text-sm font-medium text-gray-900 pr-12 py-4 text-left">harga Satuan</th>
-                                <th class="text-sm font-medium text-gray-900 pr-12 py-4 text-left">Kuantitas</th>
-                                <th class="text-sm font-medium text-gray-900 pr-12 py-4 text-left">Total Harga</th>
-                                <th class="text-sm font-medium text-gray-900 pr-12 py-4 text-left">Aksi</th>
+                                <th class="text-sm font-medium text-gray-900 py-4 text-left">Produk</th>
+                                <div class="flex gap-9">
+                                <th class="text-sm font-medium text-gray-900 py-4 text-left">harga Satuan</th>
+                                <th class="text-sm font-medium text-gray-900 py-4 text-left">Kuantitas</th>
+                                <th class="text-sm font-medium text-gray-900 py-4 text-left">Total Harga</th>
+                                <th class="text-sm font-medium text-gray-900 py-4 text-left">Aksi</th>
+                                </div>
                             </tr>
                         </thead>
                         <tbody>
