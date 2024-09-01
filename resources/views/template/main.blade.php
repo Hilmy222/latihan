@@ -25,7 +25,8 @@
     <meta name="description" content="">
     <meta name="keyword" content="">
     <meta name="author" content="RPL">
-    <title><?= $title; ?></title>
+    <title>Cemara Admin</title>
+    <link rel="shortcut icon" href="/assets/icon/Cemara.png">
 
     <!-- Custom fonts for this template -->
     <link href="/template/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">

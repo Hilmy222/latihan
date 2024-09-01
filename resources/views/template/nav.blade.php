@@ -2,7 +2,7 @@
     {{'active'}}
 }@endif">
 <a class="nav-link"></a>
-<a class ="dropdown-item" href="/dashboard">
+<a class ="dropdown-item" href="/admin">
 <i class="fa-solid fa-gauge  fa-sm fa-fw mr-2 " style="color:#ee4061"></i>
 <i style="color:#fff">Dashboard</i>
 </a>

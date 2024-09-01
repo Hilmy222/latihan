@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/icon/Cemara.png">
     <title>Login</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
@@ -11,7 +12,7 @@
         <h2 class="text-2xl font-bold mb-4 text-center">Login</h2>
         
         <!-- Form -->
-        <form action="{{ route('dashboard') }}" method="POST">
+        <form action="{{ route('home') }}" method="POST">
             @csrf
             <div class="mb-4">
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>

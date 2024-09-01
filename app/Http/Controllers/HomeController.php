@@ -12,8 +12,7 @@ class HomeController extends Controller
 
         // Mengirim data produk ke view home
         return view('home', [
-            'produk' => $produk
-        ]);
+            'produk' => $produk]);
     }
 
     public function detail($id_produk)
